@@ -71,9 +71,13 @@ namespace MunicipalServiceApp
                 return;
             }
 
+            // Safe null handling for category and attachment
+            string category = cmbCategory.SelectedItem?.ToString() ?? "Other";
+            string attachment = attachmentPath ?? "";
+
             // Create the issue
             int id = MainForm.GetNextId();
-            Issue newIssue = new Issue(id, txtLocation.Text, cmbCategory.SelectedItem.ToString(), rtbDescription.Text, attachmentPath);
+            Issue newIssue = new Issue(id, txtLocation.Text, category, rtbDescription.Text, attachment);
             MainForm.Issues.Add(newIssue);
 
             // Success message (Engagement feature)
@@ -112,6 +116,11 @@ namespace MunicipalServiceApp
         }
 
         private void ReportIssueForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

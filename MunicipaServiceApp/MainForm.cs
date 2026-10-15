@@ -23,6 +23,13 @@ namespace MunicipalServiceApp
             reportForm.ShowDialog();
         }
 
+        // ← THIS METHOD IS MISSING IN YOUR CODE
+        private void btnEvents_Click(object sender, EventArgs e)
+        {
+            EventsForm eventsForm = new EventsForm();
+            eventsForm.ShowDialog();
+        }
+
         // Helper to get the next ID number
         public static int GetNextId()
         {
