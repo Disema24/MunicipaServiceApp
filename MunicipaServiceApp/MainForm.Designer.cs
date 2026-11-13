@@ -18,14 +18,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             btnReportIssues = new Button();
             btnEvents = new Button();
+            btnServiceRequest = new Button();
             SuspendLayout();
             // 
             // btnReportIssues
             // 
-            btnReportIssues.Location = new Point(12, 145);
-            btnReportIssues.Margin = new Padding(3, 4, 3, 4);
+            btnReportIssues.Location = new Point(10, 109);
             btnReportIssues.Name = "btnReportIssues";
-            btnReportIssues.Size = new Size(108, 41);
+            btnReportIssues.Size = new Size(94, 31);
             btnReportIssues.TabIndex = 0;
             btnReportIssues.Text = "Report Issues";
             btnReportIssues.UseVisualStyleBackColor = true;
@@ -38,25 +38,34 @@
             btnEvents.FlatStyle = FlatStyle.Flat;
             btnEvents.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnEvents.ForeColor = Color.White;
-            btnEvents.Location = new Point(12, 200);
-            btnEvents.Margin = new Padding(3, 4, 3, 4);
+            btnEvents.Location = new Point(9, 158);
             btnEvents.Name = "btnEvents";
-            btnEvents.Size = new Size(296, 45);
+            btnEvents.Size = new Size(259, 34);
             btnEvents.TabIndex = 1;
             btnEvents.Text = "📅 Events & Announcements";
             btnEvents.UseVisualStyleBackColor = false;
             btnEvents.Click += btnEvents_Click;
             // 
+            // btnServiceRequest
+            // 
+            btnServiceRequest.Location = new Point(12, 146);
+            btnServiceRequest.Name = "btnServiceRequest";
+            btnServiceRequest.Size = new Size(75, 23);
+            btnServiceRequest.TabIndex = 2;
+            btnServiceRequest.Text = "Service Request Satus";
+            btnServiceRequest.UseVisualStyleBackColor = true;
+            btnServiceRequest.Click += button1_Click;
+            // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(320, 300);
+            ClientSize = new Size(280, 225);
+            Controls.Add(btnServiceRequest);
             Controls.Add(btnEvents);
             Controls.Add(btnReportIssues);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "MainForm";
             Text = "Municipal Services";
             Load += MainForm_Load;
@@ -65,5 +74,6 @@
 
         private System.Windows.Forms.Button btnReportIssues;
         private System.Windows.Forms.Button btnEvents;
+        private Button btnServiceRequest;
     }
 }
